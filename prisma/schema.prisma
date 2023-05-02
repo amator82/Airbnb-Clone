@@ -31,9 +31,9 @@ model Account {
     providerAccountId String
     refresh_token     String? @db.String
     access_token      String? @db.String
-    axpires_at        Int?
+    expires_at        Int?
     token_type        String?
-    skope             String?
+    scope             String?
     id_token          String? @db.String
     session_state     String?
 
@@ -47,7 +47,7 @@ model Listing {
     title         String
     description   String
     imageSrc      String
-    createdat     DateTime @default(now())
+    createdAt     DateTime @default(now())
     category      String
     roomCount     Int
     bathroomCount Int
@@ -65,7 +65,7 @@ model Reservation {
     userId     String   @db.ObjectId
     listingId  String   @db.ObjectId
     startDate  DateTime
-    endtime    DateTime
+    endDate    DateTime
     totalPrice Int
     createdAt  DateTime @default(now())
 
