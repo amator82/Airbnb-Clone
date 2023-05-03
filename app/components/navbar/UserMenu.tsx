@@ -30,7 +30,7 @@ const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
 			<div className='flex flex-row items-center gap-3'>
 				<div
 					onClick={() => {}}
-					className='hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-500 transition cursor-pointer'
+					className='hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer'
 				>
 					Airbnb your home
 				</div>
@@ -40,7 +40,7 @@ const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
 				>
 					<AiOutlineMenu />
 					<div className='hidden md:block'>
-						<Avatar />
+						<Avatar src={currentUser?.image} />
 					</div>
 				</div>
 			</div>
@@ -49,29 +49,26 @@ const UserMenu: FC<UserMenuProps> = ({ currentUser }) => {
 					<div className='flex flex-col cursor-pointer '>
 						{currentUser ? (
 							<>
+								<MenuItem onClick={() => {}} label='My trips' />
 								<MenuItem
-									onClick={()=> {}}
-									label='My trips'
-								/>
-								<MenuItem
-									onClick={()=>{}}
+									onClick={() => {}}
 									label='My favorites'
 								/>
 								<MenuItem
-									onClick={()=>{}}
+									onClick={() => {}}
 									label='My reservations'
 								/>
 								<MenuItem
-									onClick={()=>{}}
+									onClick={() => {}}
 									label='My properties'
 								/>
 								<MenuItem
-									onClick={()=>{}}
+									onClick={() => {}}
 									label='Airbnb my home'
 								/>
 								<hr />
 								<MenuItem
-									onClick={()=> signOut()}
+									onClick={() => signOut()}
 									label='Log out'
 								/>
 							</>

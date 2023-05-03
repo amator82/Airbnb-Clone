@@ -35,7 +35,7 @@ const LoginModal = () => {
 
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		setIsLoading(true);
-		
+
 		signIn('credentials', {
 			...data,
 			redirect: false
@@ -111,7 +111,6 @@ const LoginModal = () => {
               hover:underline
             '
 					>
-						{' '}
 						Create an account
 					</span>
 				</p>
