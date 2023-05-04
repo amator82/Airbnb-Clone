@@ -28,3 +28,10 @@ body:root {
 		background: #c0a0b9;
 	}
 }
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+	z-index: 0 !important;
+}
