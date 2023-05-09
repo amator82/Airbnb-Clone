@@ -35,3 +35,12 @@ body:root {
 .leaflet-top {
 	z-index: 0 !important;
 }
+
+.rdrMonth {
+	width: 100% !important;
+}
+
+.rdrMonthWrapper {
+	width: 100% !important;
+	font-size: 16px !important;
+}
