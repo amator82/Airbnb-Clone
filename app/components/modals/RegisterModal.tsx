@@ -19,7 +19,7 @@ import Button from '../Button';
 
 const RegisterModal = () => {
 	const registerModal = useRegisterModal();
-	const loginModal = useLoginModal()
+	const loginModal = useLoginModal();
 
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -41,7 +41,9 @@ const RegisterModal = () => {
 		axios
 			.post('/api/register', data)
 			.then(() => {
+				toast.success('Success!');
 				registerModal.onClose();
+				loginModal.onOpen();
 			})
 			.catch((error) => {
 				toast.error('Someting went wrong');
@@ -105,7 +107,10 @@ const RegisterModal = () => {
 			<div className='text-neutral-500 text-center font-light mt-4'>
 				<div className='justify-center flex flex-row items-center  gap-2'>
 					<div>Already have an account?</div>
-					<div className='text-neutral-800 cursor-pointer hover:underline' onClick={onToggle}>
+					<div
+						className='text-neutral-800 cursor-pointer hover:underline'
+						onClick={onToggle}
+					>
 						Log in
 					</div>
 				</div>
